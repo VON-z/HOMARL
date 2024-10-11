@@ -3,7 +3,7 @@ import argparse
 def get_config():
     
     parser = argparse.ArgumentParser(
-        description="onpolicy",
+        description="commformer",
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
 
@@ -102,5 +102,5 @@ def get_config():
         default=200,
         help="Max length for any episode"
     )
-    
-    
+
+    return parser
