@@ -25,5 +25,13 @@ def get_clones(module, N):
     return nn.ModuleList([copy.deepcopy(module) for i in range(N)])
 
 def check(input):
+    """检查数据类型，将np.ndarray转为tensor
+
+    Args:
+        input (np.ndarray/tensor): 被检查变量 
+
+    Returns:
+        tensor: 原数据的tensor格式
+    """
     output = torch.from_numpy(input) if type(input) == np.ndarray else input
     return output
